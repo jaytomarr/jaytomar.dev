@@ -8,6 +8,7 @@ import { cx } from "./lib/utils";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -59,6 +60,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </main>
+        <Analytics />
       </body>
 
       <Script id="vemetric-loader" strategy="afterInteractive">
