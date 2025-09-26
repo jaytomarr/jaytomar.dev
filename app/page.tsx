@@ -28,7 +28,7 @@ export default async function Home() {
               <AnimatedText
                 as="h1"
                 delay={HEADING_DELAY}
-                className="mx-auto max-w-2xl text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]"
+                className="mx-auto max-w-2xl text-center text-3xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]"
               >
                 Hey, I&apos;m Jay! <br /> Welcome to my corner of the internet!
               </AnimatedText>
@@ -38,7 +38,7 @@ export default async function Home() {
                 <AnimatedText
                   as="p"
                   delay={PARAGRAPH_DELAY}
-                  className="leading-8 text-text-secondary"
+                  className="text-sm leading-6 text-text-secondary md:text-base md:leading-8"
                 >
                   I&apos;m a full stack hybrid developer — part coder, part
                   designer, part seeker of the meaning in bugs. This site is my
@@ -102,7 +102,7 @@ export default async function Home() {
               </div>
             </GridWrapper>
             <GridWrapper>
-              <h2 className="text-center text-3xl font-medium leading-10 tracking-tighter text-text-primary md:mx-auto md:max-w-lg md:text-4xl">
+              <h2 className="text-center text-2xl font-medium leading-8 tracking-tighter text-text-primary md:mx-auto md:max-w-lg md:text-4xl md:leading-10">
                 My site is a playful sandbox. Explore, experiment, && say hello
               </h2>
             </GridWrapper>

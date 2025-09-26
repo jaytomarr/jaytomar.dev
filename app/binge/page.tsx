@@ -9,33 +9,34 @@ export default function BingePage() {
     <div className="relative space-y-16">
       <title>Binge | Jay Tomar</title>
       <GridWrapper>
-        <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
+        <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-3xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
           Binge Worthy
         </h1>
         <div className="relative mt-6">
           <HorizontalLine />
         </div>
-        <p className="mx-auto mt-6 text-center text-lg font-medium text-text-secondary">
-          The shows that turned me into a nocturnal creature.
+        <p className="mx-auto mt-6 text-center text-sm font-medium leading-6 text-text-secondary md:text-base">
+          The shows that turned me into <br className="md:hidden" />a nocturnal
+          creature.
         </p>
       </GridWrapper>
 
       {/* 7-column grid section */}
       <GridWrapper className="mt-16">
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
+        <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8">
           {bingeData.map((item, index) => (
             <div key={item.index} className="relative">
               {/* Content */}
               <div className="flex h-full flex-col">
                 {/* Square Image */}
-                <div className="mb-4 h-48 w-full">
+                <div className="mb-4 h-36 w-full md:h-48">
                   <TiltedCard
                     imageSrc={item.imgSrc}
                     altText={item.title}
                     captionText={item.title}
-                    containerHeight="192px"
+                    containerHeight="100%"
                     containerWidth="100%"
-                    imageHeight="192px"
+                    imageHeight="100%"
                     imageWidth="100%"
                     rotateAmplitude={12}
                     scaleOnHover={1.1}
@@ -46,7 +47,7 @@ export default function BingePage() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-0 text-center text-sm font-medium text-text-primary">
+                <h3 className="mb-0 h-10 text-center text-sm font-medium text-text-primary md:h-12">
                   {item.title}
                 </h3>
                 {/* Horizontal line after title */}

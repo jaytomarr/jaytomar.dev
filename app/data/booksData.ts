@@ -63,7 +63,7 @@ const booksData: BooksDataItem[] = [
   {
     index: 12,
     imgSrc: "/books/boy.jpg",
-    title: "The Boy, the Mole, the Fox ...",
+    title: "Boy, Mole, Fox and Horse",
   },
   {
     index: 13,

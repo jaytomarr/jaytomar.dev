@@ -71,7 +71,7 @@ export function Footer(): JSX.Element {
               </div>
             </div>
             <div className="flex w-full flex-col items-end py-6 text-xs lg:w-1/3 lg:pl-8">
-              <div className="flex w-full justify-between md:justify-start md:space-x-8 lg:justify-between">
+              <div className="flex w-full justify-start space-x-12 md:justify-start md:space-x-8 lg:justify-between">
                 {footerSections.map((section) => (
                   <div key={section.title}>
                     <span className="mb-4 inline-block text-base font-medium text-text-primary">

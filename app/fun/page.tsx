@@ -11,14 +11,15 @@ export default function FunPage() {
     <div className="relative space-y-16">
       <title>Fun | Jay Tomar</title>
       <GridWrapper>
-        <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
+        <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-3xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
           The fun part of my site.
         </h1>
         <div className="relative mt-6">
           <HorizontalLine />
         </div>
-        <p className="mx-auto mt-6 text-center text-lg font-medium text-text-secondary">
-          The unprofessional (or not-so-professional) zone.
+        <p className="mx-auto mt-6 text-center text-sm font-medium leading-6 text-text-secondary md:text-base">
+          The unprofessional <br className="md:hidden" />
+          (or not-so-professional) zone.
         </p>
       </GridWrapper>
 

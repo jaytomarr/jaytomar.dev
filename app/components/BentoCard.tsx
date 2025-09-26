@@ -29,7 +29,7 @@ export function BentoCard({
       } ${height} row-span-${rowSpan} col-span-${colSpan} ${className}`}
     >
       {linkTo && (
-        <div className="absolute bottom-4 right-4 z-[999] flex h-9 w-9 rotate-6 items-center justify-center rounded-full bg-indigo-200 opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-[-8px] group-hover:rotate-0 group-hover:opacity-100">
+        <div className="absolute bottom-4 right-4 z-[999] flex h-9 w-9 rotate-6 items-center justify-center rounded-full bg-indigo-100 transition-all duration-300 ease-in-out group-hover:translate-y-[-8px] group-hover:rotate-0 md:bg-indigo-200 md:opacity-0 md:group-hover:opacity-100">
           <svg
             className="h-6 w-6 text-indigo-600"
             width="24"

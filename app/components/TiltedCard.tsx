@@ -1,7 +1,7 @@
 "use client";
 
 import type { SpringOptions } from "motion/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
 
 interface TiltedCardProps {
@@ -42,6 +42,20 @@ export default function TiltedCard({
   displayOverlayContent = false,
 }: TiltedCardProps) {
   const ref = useRef<HTMLElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      console.log("Mobile detected:", mobile, "Width:", window.innerWidth);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -122,10 +136,12 @@ export default function TiltedCard({
         <motion.img
           src={imageSrc}
           alt={altText}
-          className="tilted-card-img"
+          className="tilted-card-img h-36 w-full object-cover md:h-48"
           style={{
-            width: imageWidth,
-            height: imageHeight,
+            boxShadow: isMobile ? "0 4px 8px rgba(0, 0, 0, 0.1)" : "none",
+            filter: isMobile
+              ? "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08))"
+              : "none",
           }}
         />
 

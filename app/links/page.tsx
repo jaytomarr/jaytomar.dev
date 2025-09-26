@@ -13,7 +13,7 @@ export default async function LinksPage() {
       <div className="space-y-12">
         <ProfilePicture />
         <GridWrapper>
-          <h1 className="mx-auto max-w-2xl text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
+          <h1 className="mx-auto max-w-2xl text-center text-3xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
             Hey, I&apos;m Jay!
           </h1>
         </GridWrapper>
@@ -26,12 +26,22 @@ export default async function LinksPage() {
           </div>
         </GridWrapper>
         <GridWrapper>
-          <div className="flex justify-center space-x-4 py-4">
-            <Button href="/" variant="primary">
+          <div className="flex flex-col items-center space-y-4 py-1 md:flex-row md:justify-center md:space-x-4 md:space-y-0">
+            <div className="flex space-x-4">
+              <Button
+                href="https://drive.google.com/file/d/1mSZx5jsSE5qRdVsdAowDItV73j0syg6G/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+              >
+                View Resume
+              </Button>
+              <Button href="mailto:iamjaytomar@gmail.com" variant="secondary">
+                Email me
+              </Button>
+            </div>
+            <Button href="/" variant="secondary">
               View my full website
-            </Button>
-            <Button href="mailto:iamjaytomar@gmail.com" variant="secondary">
-              Email me
             </Button>
           </div>
         </GridWrapper>
@@ -40,8 +50,8 @@ export default async function LinksPage() {
             <span>Socials</span>
           </div>
         </GridWrapper>
-        <GridWrapper>
-          <div className="relative mx-auto grid max-w-4xl grid-cols-2 place-items-center justify-items-center gap-8 md:grid-cols-3">
+        <GridWrapper className="after:hidden">
+          <div className="relative mx-auto grid max-w-4xl grid-cols-3 place-items-center justify-items-center gap-x-8 gap-y-12 md:grid-cols-3">
             {/* LinkedIn */}
             <a
               href={siteMetadata.linkedin}
@@ -49,8 +59,8 @@ export default async function LinksPage() {
               rel="noopener noreferrer"
               className="group no-underline transition-all duration-500 group-hover:-translate-y-3"
             >
-              <div className="group inline-block text-center">
-                <div className="h-28 w-28 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400">
+              <div className="group flex flex-col items-center text-center">
+                <div className="h-20 w-20 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400 md:h-28 md:w-28">
                   <div
                     className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
                     style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
@@ -58,9 +68,9 @@ export default async function LinksPage() {
                     <Image
                       src="/links/linkedin.svg"
                       alt="LinkedIn"
-                      width={48}
-                      height={48}
-                      className="h-12 w-12"
+                      width={40}
+                      height={40}
+                      className="h-10 w-10"
                     />
                   </div>
                   <p className="mt-3 text-sm text-gray-500">LinkedIn</p>
@@ -75,8 +85,8 @@ export default async function LinksPage() {
               rel="noopener noreferrer"
               className="group no-underline transition-all duration-500 group-hover:-translate-y-3"
             >
-              <div className="group inline-block text-center">
-                <div className="h-28 w-28 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400">
+              <div className="group flex flex-col items-center text-center">
+                <div className="h-20 w-20 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400 md:h-28 md:w-28">
                   <div
                     className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
                     style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
@@ -84,9 +94,9 @@ export default async function LinksPage() {
                     <Image
                       src="/links/github.svg"
                       alt="GitHub"
-                      width={48}
-                      height={48}
-                      className="h-12 w-12"
+                      width={40}
+                      height={40}
+                      className="h-10 w-10"
                     />
                   </div>
                   <p className="mt-3 text-sm text-gray-500">GitHub</p>
@@ -101,8 +111,8 @@ export default async function LinksPage() {
               rel="noopener noreferrer"
               className="group no-underline transition-all duration-500 group-hover:-translate-y-3"
             >
-              <div className="group inline-block text-center">
-                <div className="h-28 w-28 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400">
+              <div className="group flex flex-col items-center text-center">
+                <div className="h-20 w-20 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400 md:h-28 md:w-28">
                   <div
                     className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
                     style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
@@ -110,9 +120,9 @@ export default async function LinksPage() {
                     <Image
                       src="/links/behance.svg"
                       alt="Behance"
-                      width={48}
-                      height={48}
-                      className="h-12 w-12"
+                      width={40}
+                      height={40}
+                      className="h-10 w-10"
                     />
                   </div>
                   <p className="mt-3 text-sm text-gray-500">Behance</p>
@@ -127,8 +137,8 @@ export default async function LinksPage() {
               rel="noopener noreferrer"
               className="group no-underline transition-all duration-500 group-hover:-translate-y-3"
             >
-              <div className="group inline-block text-center">
-                <div className="h-28 w-28 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400">
+              <div className="group flex flex-col items-center text-center">
+                <div className="h-20 w-20 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400 md:h-28 md:w-28">
                   <div
                     className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
                     style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
@@ -136,9 +146,9 @@ export default async function LinksPage() {
                     <Image
                       src="/links/instagram.svg"
                       alt="Instagram"
-                      width={48}
-                      height={48}
-                      className="h-12 w-12"
+                      width={40}
+                      height={40}
+                      className="h-10 w-10"
                     />
                   </div>
                   <p className="mt-3 text-sm text-gray-500">Instagram</p>
@@ -153,8 +163,8 @@ export default async function LinksPage() {
               rel="noopener noreferrer"
               className="group no-underline transition-all duration-500 group-hover:-translate-y-3"
             >
-              <div className="group inline-block text-center">
-                <div className="h-28 w-28 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400">
+              <div className="group flex flex-col items-center text-center">
+                <div className="h-20 w-20 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400 md:h-28 md:w-28">
                   <div
                     className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
                     style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
@@ -162,12 +172,14 @@ export default async function LinksPage() {
                     <Image
                       src="/links/x.svg"
                       alt="X"
-                      width={48}
-                      height={48}
-                      className="h-12 w-12"
+                      width={40}
+                      height={40}
+                      className="h-10 w-10"
                     />
                   </div>
-                  <p className="mt-3 text-sm text-gray-500">X (Twitter)</p>
+                  <p className="mt-3 whitespace-nowrap text-sm text-gray-500 md:whitespace-normal">
+                    X (Twitter)
+                  </p>
                 </div>
               </div>
             </a>
@@ -179,8 +191,8 @@ export default async function LinksPage() {
               rel="noopener noreferrer"
               className="group no-underline transition-all duration-500 group-hover:-translate-y-3"
             >
-              <div className="group inline-block text-center">
-                <div className="h-28 w-28 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400">
+              <div className="group flex flex-col items-center text-center">
+                <div className="h-20 w-20 rounded-[20px] border border-border-primary bg-bg-primary p-2 transition-all duration-300 group-hover:-translate-y-3 group-hover:border-indigo-400 md:h-28 md:w-28">
                   <div
                     className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
                     style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
@@ -188,9 +200,9 @@ export default async function LinksPage() {
                     <Image
                       src="/links/leetcode.svg"
                       alt="LeetCode"
-                      width={48}
-                      height={48}
-                      className="h-12 w-12"
+                      width={40}
+                      height={40}
+                      className="h-10 w-10"
                     />
                   </div>
                   <p className="mt-3 text-sm text-gray-500">LeetCode</p>
@@ -198,6 +210,9 @@ export default async function LinksPage() {
               </div>
             </a>
           </div>
+        </GridWrapper>
+        <GridWrapper>
+          <div className="py-8"></div>
         </GridWrapper>
       </div>
       <MinimalPageEnder />

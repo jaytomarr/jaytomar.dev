@@ -7,20 +7,17 @@ export function FavouriteArtistsBento({ linkTo }: { linkTo?: string }) {
       height="h-[275px] md:h-[304px] lg:h-[300px]"
       linkTo={linkTo || "/artists"}
     >
-      <div className="group flex h-full">
-        <div className="text-balance">
+      <div className="group flex h-full flex-col md:flex-row">
+        <div className="flex-1 text-balance md:pr-4">
           <h2 className="mb-4 text-base font-medium">Favourite Artists</h2>
-          <p className="mb-2 text-balance pr-1 text-text-secondary md:pr-4">
+          <p className="mb-2 text-balance text-sm text-text-secondary md:text-base">
             The people who make me feel like I should quit coding and become a
             rockstar.
           </p>
         </div>
-        <div className="relative">
+        <div className="relative mt-4 flex-shrink-0 md:order-last md:mt-0">
           <div className="group inline-block text-center">
-            <div
-              className="rounded-[20px] border border-border-primary p-2 transition-all duration-500 ease-out group-hover:border-indigo-400"
-              style={{ width: 188, height: 278 }}
-            >
+            <div className="h-[180px] w-[120px] rounded-[20px] border border-border-primary p-2 transition-all duration-500 ease-out group-hover:border-indigo-400 md:h-[278px] md:w-[188px]">
               <div
                 className="grid h-full place-items-center rounded-xl border-2 border-[#A5AEB81F]/10 bg-[#EDEEF0]"
                 style={{ boxShadow: "0px 2px 1.5px 0px #A5AEB852 inset" }}
@@ -28,7 +25,7 @@ export function FavouriteArtistsBento({ linkTo }: { linkTo?: string }) {
             </div>
           </div>
           <Image
-            className="absolute -top-1 left-0 h-[270px] w-[180px] rotate-[8deg] rounded-lg object-cover shadow transition-all duration-500 group-hover:rotate-[4deg] group-hover:scale-105"
+            className="absolute -top-1 left-0 h-[172px] w-[112px] rotate-[8deg] rounded-lg object-cover shadow transition-all duration-500 group-hover:rotate-[4deg] group-hover:scale-105 md:h-[270px] md:w-[180px]"
             src="/music_meme.jpg"
             alt="Music meme"
             width={180}

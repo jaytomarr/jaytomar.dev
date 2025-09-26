@@ -8,13 +8,13 @@ export default function ProjectPage() {
   return (
     <div className="relative space-y-16">
       <GridWrapper>
-        <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
+        <h1 className="mx-auto mt-16 max-w-2xl text-balance text-center text-3xl font-medium leading-tight tracking-tighter text-text-primary md:text-6xl md:leading-[64px]">
           A collection of my favorite works.
         </h1>
         <div className="relative mt-6">
           <HorizontalLine />
         </div>
-        <p className="mx-auto mt-6 text-center text-lg font-medium text-text-secondary">
+        <p className="mx-auto mt-6 text-center text-sm font-medium leading-6 text-text-secondary md:text-base">
           Or the ones that worked.
         </p>
       </GridWrapper>
@@ -35,14 +35,14 @@ export default function ProjectPage() {
               {/* Project content */}
               <div className="flex h-full flex-col px-6 pb-0 pt-6">
                 {/* Image */}
-                <div className="mb-4 h-48 w-full">
+                <div className="mb-4 h-36 w-full md:h-48">
                   <TiltedCard
                     imageSrc={project.imgSrc}
                     altText={project.title}
                     captionText={project.title}
-                    containerHeight="192px"
+                    containerHeight="100%"
                     containerWidth="100%"
-                    imageHeight="192px"
+                    imageHeight="100%"
                     imageWidth="100%"
                     rotateAmplitude={12}
                     scaleOnHover={1.1}

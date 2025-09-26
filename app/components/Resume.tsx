@@ -40,7 +40,7 @@ export function Resume() {
             {resumeData.experiences.map((experience) => (
               <div
                 key={experience.company}
-                className="grid grid-cols-[1fr,5fr] gap-6 py-12 first:pt-0 last:pb-0 md:grid-cols-[2fr,1fr,4fr]"
+                className="grid grid-cols-[1fr,5fr] gap-6 py-8 first:pt-0 last:pb-0 md:grid-cols-[2fr,1fr,4fr]"
               >
                 <div className="hidden md:block">
                   <h3 className="text-xl font-bold">{experience.company}</h3>
@@ -55,12 +55,23 @@ export function Resume() {
                       key={`${experience.company}-${index}`}
                       className="space-y-4"
                     >
-                      <h4 className="text-lg font-semibold">
+                      <div className="md:hidden">
+                        <h3 className="text-base font-bold">
+                          {experience.company}
+                        </h3>
+                        <p className="text-xs text-gray-600">
+                          {experience.period}
+                        </p>
+                      </div>
+                      <h4 className="text-lg font-semibold md:text-lg">
                         {position.title}
                       </h4>
-                      <div className="space-y-3">
+                      <div className="space-y-2 md:space-y-3">
                         {position.description.map((desc, i) => (
-                          <p key={i} className="text-gray-600">
+                          <p
+                            key={i}
+                            className="text-sm text-gray-600 md:text-base"
+                          >
                             {desc}
                           </p>
                         ))}

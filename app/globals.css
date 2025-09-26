@@ -44,6 +44,13 @@
   border-radius: 15px;
   will-change: transform;
   transform: translateZ(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+@media (min-width: 768px) {
+  .tilted-card-img {
+    box-shadow: none !important;
+  }
 }
 
 .tilted-card-overlay {
