@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jay Tomar's Portfolio Website
 
-## Getting Started
+This is my personal portfolio website showcasing my projects, skills, and interests. Built with modern web technologies to create an engaging and interactive experience.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom components
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) for smooth interactions
+- **UI Components**: [Headless UI](https://headlessui.com/) for accessible components
+- **Typography**: [Geist](https://vercel.com/font) font family
+- **Language**: TypeScript for type safety
+- **Deployment**: Optimized for Vercel
+
+## 📁 Project Structure
+
+```
+jaytomar.dev/
+├── app/                    # Next.js App Router
+│   ├── components/        # Reusable UI components
+│   ├── data/             # Static data and metadata
+│   ├── lib/              # Utility functions and helpers
+│   ├── about/            # About page
+│   ├── artists/          # Favorite artists showcase
+│   ├── binge/            # Movies & shows recommendations
+│   ├── books/            # Book recommendations
+│   ├── games/            # Gaming favorites
+│   ├── projects/         # Portfolio projects
+│   ├── toolstack/        # Technology stack
+│   └── links/            # Social links
+├── public/               # Static assets
+│   ├── artists/         # Artist images
+│   ├── binge/           # Movie/show posters
+│   ├── books/           # Book covers
+│   ├── games/           # Game screenshots
+│   ├── projects/        # Project images
+│   └── toolstack/       # Technology icons
+└── README.md
+```
+
+## 🎨 Features
+
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Interactive Animations**: Smooth transitions and micro-interactions
+- **Bento Grid Layout**: Modern card-based design system
+- **Dynamic Content**: Showcases projects, books, games, and more
+- **SEO Optimized**: Meta tags and structured data
+- **Performance**: Optimized images and lazy loading
+
+## 🛠️ Getting Started
+
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+bun install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
 # or
-pnpm dev
-# or
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## Learn More
+## 🌐 Live Website
 
-To learn more about Next.js, take a look at the following resources:
+Visit [jaytomar.dev](https://jaytomar.dev) to see the live portfolio.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is private and personal. All rights reserved.
