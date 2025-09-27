@@ -11,6 +11,7 @@ import { GridWrapper } from "./components/GridWrapper";
 import { Button } from "./components/Button";
 import { ProjectsBento } from "./components/ProjectsBento";
 import { MinimalPageEnder } from "./components/MinimalPageEnder";
+import { HorizontalLine } from "./components/HorizontalLine";
 
 export default async function Home() {
   const PROFILE_DELAY = 0;
@@ -92,6 +93,26 @@ export default async function Home() {
           </GridWrapper>
         </section>
 
+        {/* Horizontal line and button with no spacing */}
+        <div className="relative flex justify-center">
+          <HorizontalLine />
+          <Button
+            variant="secondary"
+            href="https://drive.google.com/file/d/1mSZx5jsSE5qRdVsdAowDItV73j0syg6G/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Resume
+          </Button>
+        </div>
+      </div>
+
+      {/* Horizontal line before next section */}
+      <div className="flex justify-center py-0">
+        <HorizontalLine />
+      </div>
+
+      <div className="mt-6 space-y-10 md:mt-8 md:space-y-16">
         {/* My Site Section */}
         <section className="relative space-y-10 md:space-y-16">
           {/* <MySitePattern /> */}

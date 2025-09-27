@@ -3,23 +3,59 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Define images with weights (higher number = more likely to be selected)
+const imagesWithWeights = [
+  { src: "/jay_headshot1.jpg", weight: 7 }, // 70% chance
+  { src: "/jay_funny.png", weight: 3 }, // 30% chance
+];
+
 export function ProfilePicture() {
   const [imageSrc, setImageSrc] = useState("/jay_headshot1.jpg");
   const [isChanging, setIsChanging] = useState(false);
 
+  const selectWeightedImage = (excludeCurrent = false) => {
+    const availableImages = excludeCurrent
+      ? imagesWithWeights.filter((img) => img.src !== imageSrc)
+      : imagesWithWeights;
+
+    const totalWeight = availableImages.reduce(
+      (sum, img) => sum + img.weight,
+      0,
+    );
+    let random = Math.random() * totalWeight;
+
+    for (const img of availableImages) {
+      random -= img.weight;
+      if (random <= 0) {
+        return img.src;
+      }
+    }
+    return availableImages[0].src; // fallback
+  };
+
   const changeImage = () => {
     setIsChanging(true);
-    const images = ["/jay_headshot1.jpg", "/jay_funny.png"];
-    const availableImages = images.filter((img) => img !== imageSrc);
-    const randomIndex = Math.floor(Math.random() * availableImages.length);
-    setImageSrc(availableImages[randomIndex]);
+    const newImage = selectWeightedImage(true);
+    setImageSrc(newImage);
   };
 
   useEffect(() => {
-    // Only run once on mount to set initial random image
-    const images = ["/jay_headshot1.jpg", "/jay_funny.png"];
-    const randomIndex = Math.floor(Math.random() * images.length);
-    setImageSrc(images[randomIndex]);
+    // Only run once on mount to set initial weighted random image
+    const availableImages = imagesWithWeights;
+    const totalWeight = availableImages.reduce(
+      (sum, img) => sum + img.weight,
+      0,
+    );
+    let random = Math.random() * totalWeight;
+
+    for (const img of availableImages) {
+      random -= img.weight;
+      if (random <= 0) {
+        setImageSrc(img.src);
+        return;
+      }
+    }
+    setImageSrc(availableImages[0].src); // fallback
   }, []);
 
   return (
