@@ -97,7 +97,7 @@ export const PhotoGallery = ({
       y: "8px",
       zIndex: 30,
       direction: "right" as Direction,
-      src: "/jay_sitting2.jpg",
+      src: "/jay_headshot2.jpg",
     },
     {
       id: 4,
@@ -106,7 +106,7 @@ export const PhotoGallery = ({
       y: "22px",
       zIndex: 20,
       direction: "right" as Direction,
-      src: "/jay_headshot2.png",
+      src: "/jay_headshot3.jpg",
     },
     {
       id: 5,

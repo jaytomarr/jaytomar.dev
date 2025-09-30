@@ -94,7 +94,7 @@ export function AnimatedMobilePhotos({ delay }: AnimatedMobilePhotosProps) {
       y: "4px", // Scaled down from 8px
       zIndex: 30,
       direction: "right" as const,
-      src: "/jay_sitting2.jpg",
+      src: "/jay_headshot2.jpg",
     },
     {
       id: 4,
@@ -103,7 +103,7 @@ export function AnimatedMobilePhotos({ delay }: AnimatedMobilePhotosProps) {
       y: "11px", // Scaled down from 22px
       zIndex: 20,
       direction: "right" as const,
-      src: "/jay_headshot2.png",
+      src: "/jay_headshot3.jpg",
     },
     {
       id: 5,
