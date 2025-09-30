@@ -28,7 +28,7 @@ const resumeData: ResumeData = {
       ],
     },
   ],
-  avatarUrl: "/jay_headshot1.jpg",
+  avatarUrl: "/jay_headshot2.jpg",
 };
 
 export function Resume() {

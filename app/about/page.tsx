@@ -36,7 +36,7 @@ export default function AboutPage() {
                     <Photo
                       width={120}
                       height={120}
-                      src="/jay_headshot1.jpg"
+                      src="/jay_headshot2.jpg"
                       alt="Jay Tomar"
                       direction="left"
                     />
